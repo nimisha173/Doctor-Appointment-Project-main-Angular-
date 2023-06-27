@@ -15,6 +15,7 @@
                 <div class="text-center mt-3">
                     <!-- <span class="bg-secondary p-1 px-4 rounded text-white">Pro</span> -->
                     <h5 class="mt-2 mb-0">Alexender Schidmt</h5>
+
                     <span>Cardiology</span>
                     
                     <div class="px-4 mt-1">
@@ -26,7 +27,7 @@
                     
                     <div class="buttons">
                         
-                        <button class="btn btn-outline-primary px-4" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Post Review</button>
+                        <button class="btn btn-outline-primary px-4" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" >Post Review</button>
                         
                         <button class="btn btn-primary px-4 ms-3">View Review</button>
                     </div>
@@ -51,11 +52,30 @@
         </div>
         <div class="modal-body">
           <!-- <p>odal body text goes here.</p> -->
-          <input type="text">
+          <div class="mb-3">
+            <label for="name" class="form-label">AppointmentId</label>
+            <input type="number" class="form-control" id="appointmentId"  [(ngModel)]="Id" name="appointmentId">
+            <button type="button" class="btn btn-outline-info" (click)="submit(Id)">Check</button>
+          </div>
+          
+          <div class="mb-3">
+            <label for="name" class="form-label">UserId</label>
+            <input type="number" class="form-control" id="userId"  [(ngModel)]="review.userId" name="userId">
+          </div>
+          <div class="mb-3">
+            <label for="name" class="form-label">DoctorId</label>
+            <input type="number" class="form-control" id="doctorId"  [(ngModel)]="review.doctorId" name="doctorId">
+          </div>
+          
+
+          <div class="mb-3">
+            <label for="name" class="form-label">description</label>
+            <textarea class="form-control" id="description"  [(ngModel)]="review.description" name="description"></textarea>
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="submit" class="btn btn-primary" (click)="saveProduct()">Save changes</button>
         </div>
       </div>
     </div>
