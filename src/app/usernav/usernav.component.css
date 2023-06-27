@@ -8,17 +8,16 @@
 	color: #212112; */
 
   .logosc{
-    background-color: white;
-    border-radius: 50px;
+    /* background-color: white; */
+    /* border-radius: 50px; */
     padding: 5px;
     margin-left: 30px;
-    width:30px;
+    width:40px;
     object-fit: contain;
-    background-blend-mode: lighten;
   }
 
   .navbar-brand{
-    padding-left: 15px;
+    padding-left: 5px;
     font-size: 18px;
     font-weight: 600;
   }
